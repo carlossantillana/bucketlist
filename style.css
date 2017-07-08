@@ -16,10 +16,12 @@ body, html{
     font-size: 120%;
 }
 
-.btn{
+.button{
     background-image: -webkit-linear-gradient(#283E51, #4B79A1);
-    font-size: 24px;
-    padding: 12px;
+    font-size: 120%;
+    position: relative;
+    top: 12px;
+    padding: 6px;
     color: #FFF;
     border: 1px solid black;
 }
