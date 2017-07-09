@@ -20,6 +20,8 @@ body, html{
     background-image: -webkit-linear-gradient(#283E51, #4B79A1);
     font-size: 120%;
     position: relative;
+    display: inline-table;
+    width: initial;
     top: 12px;
     padding: 6px;
     color: #FFF;
