@@ -8,9 +8,7 @@
         $getItem;
         $revisedItem;
         $newItem = $_POST['enterItem'];
-        echo "original:" . $newItem . "<br>";
         $revisedItem = SmartCensor($newItem);
-        echo "new:" . $revisedItem . "<br>";
         if ($newItem != $revisedItem || $newItem === " " || strlen($newItem) <= 2 || is_numeric($newItem)){
             header('Location: index.html');
         }
