@@ -38,7 +38,7 @@ body, html{
     color: #FFF;
 }
 
-#enter{
+.formButton{
     background-image: -webkit-linear-gradient(#283E51, #4B79A1);
     color: #FFF;
     border: 1px solid black;

@@ -22,12 +22,11 @@
           <form action="submit.php" method="POST">
               Submit Bucket list idea:<br>
               <input type = "text" name="enterItem" required>
-              <input type="submit" name="submit" id="enter" value="submit">
-              <!-- make cancel button -->
+              <input type="submit" name="submit" class="formButton" value="submit">
+              <input type="reset" name="cancel" id="cancelItem" class="formButton" onclick="hideItem()" value="cancel" >
       </form>
   </div>
   <br>
-        <a class="button" href='submit.php'>run PHP</a>
      </div>
 
      <script type = "text/javascript">
@@ -36,7 +35,11 @@
         $('#submitItem').click(function(){
             $(".form").show();
          });
+         $('#cancelItem').click(function(){
+             $(".form").hide();
+          });
      });
+
      function printItem(){
             $.get('query.php', function(neededData){
                 var BucketList = JSON.parse(neededData);
