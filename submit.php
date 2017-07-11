@@ -1,14 +1,14 @@
 <?php
+//Initializing variables
 $host = "localhost";
 $user = "root";
 $password = "Lapras#131";
 $database = "bucketList";
+$getItem = array();
+$getItem2 = array();
+$newItem = $_POST['enterItem'];
+//start connection
 $conn = new mysqli($host, $user, $password, $database);
-if ($conn->connect_error){
-    echo "Connection failed";
-}
-else{
-    echo "connection successful <br>";
-}
-echo $_POST['enterItem'];
+$sql = "INSERT INTO items(item) VALUE ('$newItem')";
+$conn->query($sql);//Insert into database
 ?>
