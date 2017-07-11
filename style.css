@@ -1,0 +1,56 @@
+body, html{
+    height: 100%;
+    margin: 0;
+}
+.header, .subheader, .form{
+    text-align: center;
+    font-family: 'Bellefair', serif;
+    color: #FFF;
+}
+
+.header{
+    font-size: 150%;
+}
+
+.subheader{
+    font-size: 120%;
+}
+
+
+.button{
+    background-image: -webkit-linear-gradient(#283E51, #4B79A1);
+    font-size: 120%;
+    position: relative;
+    display: inline-table;
+    width: initial;
+    top: 12px;
+    padding: 6px;
+    color: #FFF;
+    border: 1px solid black;
+}
+
+.form{
+    font-size: 160%;
+    position: relative;
+    width: initial;
+    top: 12px;
+    padding: 6px;
+    color: #FFF;
+}
+
+#enter{
+    background-image: -webkit-linear-gradient(#283E51, #4B79A1);
+    color: #FFF;
+    border: 1px solid black;
+}
+
+.background{
+background-image: url("https://farm5.staticflickr.com/4210/35634325332_e0e0b95b4b_b.jpg");
+
+height: 100%;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+top: 0px;
+}
