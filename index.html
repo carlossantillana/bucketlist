@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+<head>
+    <link href="style.css" type "text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <title>Bucket List Generator</title>
+</head>
+<body>
+
+     <div class= "background">
+         <br><br><br>
+         <div class= "header">
+             <h1>Bucket List Generator</h1>
+        </div>
+        <div class= "subheader">
+             <h3>Giving you a new bucket list item every day!</h3>
+             <a class="button" id ="getItem" onclick="printItem()">Get Item</a>
+             <a class="button" id = "submitItem">Submit Item</a>
+             <br><br>
+      </div>
+      <div class = "form">
+          <form>
+          Submit Bucket list idea:<br>
+          <input type = "text" name="enterItem">
+          <input type="submit" id="enter" value="Submit">
+      </form>
+  </div>
+       <div id="bucketItem"</div>
+     </div>
+
+     <script type = "text/javascript">
+     $(document).ready(function(){
+        $(".form").hide();
+        $('#submitItem').click(function(){
+            $(".form").show();
+         });
+     });
+     function printItem(){
+            $.get('query.php', function(neededData){
+                var BucketList = JSON.parse(neededData);
+                alert(BucketList[Math.floor(Math.random() * BucketList.length)]);
+            });
+     }
+
+     </script>
+</body>
+</html>
