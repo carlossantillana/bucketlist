@@ -4,11 +4,9 @@
     <link href="style.css" type "text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
     <script type="text/javascript" src="jquery.js"></script>
-
     <title>Bucket List Generator</title>
 </head>
 <body>
-
      <div class= "background">
          <br><br><br>
          <div class= "header">
@@ -21,13 +19,14 @@
              <br><br>
       </div>
       <div class = "form">
-          <form>
-          Submit Bucket list idea:<br>
-          <input type = "text" name="enterItem">
-          <input type="submit" id="enter" value="Submit">
+          <form action="submit.php" method="POST">
+              Submit Bucket list idea:<br>
+              <input type = "text" name="enterItem" required>
+              <input type="submit" name="submit" class="formButton" value="submit">
+              <input type="reset" name="cancel" id="cancelItem" class="formButton" onclick="hideItem()" value="cancel" >
       </form>
   </div>
-       <div id="bucketItem"</div>
+  <br>
      </div>
 
      <script type = "text/javascript">
@@ -36,7 +35,11 @@
         $('#submitItem').click(function(){
             $(".form").show();
          });
+         $('#cancelItem').click(function(){
+             $(".form").hide();
+          });
      });
+
      function printItem(){
             $.get('query.php', function(neededData){
                 var BucketList = JSON.parse(neededData);
